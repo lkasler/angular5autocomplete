@@ -1,4 +1,4 @@
-# MatAutocomplete selected option event handling demo
+# Angular 5 MatAutocomplete selected option event handling demo
 
 Mat Autocomplete example, with selected option event handling and transfroming to Observable
 
