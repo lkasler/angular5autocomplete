@@ -1,3 +1,21 @@
+# MatAutocomplete selected option event handling demo
+
+Mat Autocomplete example, with selected option event handling and transfroming to Observable
+
+Open JS console to check the event handling logging
+
+## MatAutocomplete selector component
+autocomplete-selector.component
+
+Check event handlong functions and properties, Subscriber stream, optionSelected event binding etc
+
+## Sibling component of autocomplete-selector.component where we access the autocomplete component
+selector-sibling.component
+In the sibling component we accees the autocomplete component via @Input
+
+## selector-sibling.component the holder component where we configure components and communications between them.
+
+
 # AngularCommunication
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
