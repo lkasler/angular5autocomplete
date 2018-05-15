@@ -59,7 +59,7 @@ In the file launch.json use:
     {
       "type": "chrome",
       "request": "launch",
-      "runtimeExecutable": "/usr/bin/chromium-browser",
+      "runtimeExecutable": "/usr/bin/chromium-browser", //you may have to remove this line  or reassign the path of chrome
       "name": "Launch Chrome",
       "url": "http://localhost:4200",
       "webRoot": "${workspaceRoot}",
