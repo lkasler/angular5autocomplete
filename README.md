@@ -43,3 +43,44 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Debug Angular app in VS Code
+
+Use the `Debugger for Chrome` plugin for debugging client code in VS Code.
+
+In the file launch.json use:
+```json
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "runtimeExecutable": "/usr/bin/chromium-browser",
+      "name": "Launch Chrome",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "userDataDir": "${workspaceRoot}/.vscode/chrome",
+      "runtimeArgs": ["--disable-session-crashed-bubble"]
+    },
+    {
+      "name": "Attach Chrome",
+      "type": "chrome",
+      "request": "attach",
+      "url": "http://localhost:4200",
+      "port": 9222,
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true
+    }
+  ]
+}
+```
+
+It's important to be sure that Chrome instances are not already running or Chrome already launched with debug port 9222.
+To lauch chrome with debug port use the additional argument in the target shortcut (Recommandation: Create a new desktop short for that): ` --remote-debugging-port=9222`.
+
+Example whole command: `C:\Users\u95598\AppData\Local\Google\Chrome\Application\chrome.exe --remote-debugging-port=9222`
