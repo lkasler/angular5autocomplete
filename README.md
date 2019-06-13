@@ -83,4 +83,4 @@ In the file launch.json use:
 It's important to be sure that Chrome instances are not already running or Chrome already launched with debug port 9222.
 To lauch chrome with debug port use the additional argument in the target shortcut (Recommandation: Create a new desktop short for that): ` --remote-debugging-port=9222`.
 
-Example whole command: `C:\Users\u95598\AppData\Local\Google\Chrome\Application\chrome.exe --remote-debugging-port=9222`
+Example whole command: ${Chrome_folder}/chrome.exe --remote-debugging-port=9222`
